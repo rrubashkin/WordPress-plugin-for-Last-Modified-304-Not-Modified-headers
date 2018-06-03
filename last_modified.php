@@ -1,11 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: @RRubashkin
- * Date: 03.06.2018
- * Time: 18:37
- * A simple wordpress plugin to add 'last modified' and '304 Not Modified' headers
- */
+/*
+* Plugin Name: Last-Modified and 304 Not-Modified plugin
+* Plugin URI: https://github.com/rrubashkin/WordPress-plugin-for-Last-Modified-304-Not-Modified-headers
+* Description: A simple wordpress plugin to add 'last modified' and '304 Not Modified' headers to your site
+* Version: 1.0.0
+* Author: rrubashkin
+* Author URI: https://github.com/rrubashkin/
+* License: GPL v3
+* Domain Path: The domain path let WordPress know where to find the translations. More information can be found in the Domain Path section of the How to Internationalize your Plugin page.
+*/
 
 add_action( 'template_redirect', 'last_modified_304_headers' );
 
