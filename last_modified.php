@@ -25,12 +25,12 @@ function last_modified_304_headers() {
 
 	if ( is_singular() ) {
 		global $post;
-		$LastModified = get_the_modified_time( $post );
+		$LastModified = get_the_modified_time('U', $post );
 
 	} elseif ( is_archive() ) {
 		global $wp_query;
 		foreach ( $wp_query->posts as $the_post ) {
-			$LastModified = max( $LastModified, get_the_modified_time( $the_post ) );
+			$LastModified = max( $LastModified, get_the_modified_time( 'U', $the_post ) );
 		}
 
 	} else {
